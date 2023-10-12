@@ -1,27 +1,67 @@
 <script>
-//GAME VARIABLES    
-    let choices = ["rock", "paper", "scissors"]
-
-
-// GETTING USER INPUT
-
-    const userInput = prompt("Pick Rock, Paper or Scissors!: ").toLocaleLowerCase();
-        if(userInput === "rock" || userInput === "paper" || userInput === "scissors")
-            console.log("You choose: " + `${userInput}`)
-            else{
-                console.log("Wrong! Try again!")
-            }
-
-// GETTING COMPUTER INPUT
-
-const computerInput = choices[Math.floor(Math.random() * choices.length)]
-    console.log("Computer choose: " + `${computerInput}`)
-
-
-// WHO'S WINNER?
-
-    //user choose rock:
+    //GAME VARIABLES    
+        let choices = ["rock", "paper", "scissors"]
     
     
+    // GETTING USER INPUT
+    
+        const userInput = prompt("Pick Rock, Paper or Scissors!: ").toLocaleLowerCase();
+            if(userInput === "rock" || userInput === "paper" || userInput === "scissors")
+                console.log("You choose: " + `${userInput}`)
+                else{
+                    console.log("Wrong! Try again!")
+                }
+    
+    // GETTING COMPUTER INPUT
+    
+    const computerInput = choices[Math.floor(Math.random() * choices.length)]
+        console.log("Computer choose: " + `${computerInput}`)
+    
+    
+    // WHO'S WINNER?
+    
+        //user choose rock:
+        
+        if(userInput === "rock"){
+            if(computerInput === "rock")
+            console.log("It's a Tie!")
+            else if(computerInput === "paper")
+            console.log("Computer wins! Paper beats Rock!")
+            else if(computerInput === "scissors")
+            console.log("You win! Rock beats Scissors")
+    
+        }
+            
+    
+        
+    
+        //user choose paper:
+    
+        if(userInput === "paper"){
+            if(computerInput === "paper")
+            console.log("It's a Tie!")
+            else if(computerInput === "rock")
+            console.log("You win! Paper beats Rock!")
+            else if(computerInput === "scissors")
+            console.log("Computer Win! Scissors beats Paper")
+    
+        }
+    
+        
+    
+        // user choose scissors
+    
+        if(userInput === "scissors"){
+            if(computerInput === "scissors")
+            console.log("It's a Tie!")
+            else if(computerInput === "rock")
+            console.log("Computer wins! Rock beats Scissors!")
+            else if(computerInput === "paper")
+            console.log("You win! Scissors beats Paper")
+    
+        }
+        
 
+
+    
 </script>
