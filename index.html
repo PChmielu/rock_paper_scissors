@@ -1,11 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+<script>
+//GAME VARIABLES    
+    let choices = ["rock", "paper", "scissors"]
+
+
+// GETTING USER INPUT
+
+    const userInput = prompt("Pick Rock, Paper or Scissors!: ").toLocaleLowerCase();
+        if(userInput === "rock" || userInput === "paper" || userInput === "scissors")
+            console.log("You choose: " + `${userInput}`)
+            else{
+                console.log("Wrong! Try again!")
+            }
+
+
+// GETTING COMPUTER INPUT
+
+    const computerInput = choices[Math.floor(Math.random() * 3)]
+    console.log("Computer choose: " + `${computerInput}`)
+</script>
