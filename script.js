@@ -43,7 +43,6 @@ function playRound(playerSelection, computerSelection){
     
 } 
 
- 
 
 
 function getPlayerChoice(){
@@ -62,36 +61,6 @@ function getPlayerChoice(){
 }
 
 
-/**function game(){
-    let scorePlayer = 0;
-    let scoreComputer = 0;
-    for (let i = 0; i < 5; i++){
-        const playerSelection = getPlayerChoice();
-        const computerSelection = getComputerChoice()
-        console.log(playRound(playerSelection, computerSelection));
-        console.log("------------------")
-        if(checkWinner(playerSelection,computerSelection) == "Player"){
-            scorePlayer++
-        }
-        else if(checkWinner(playerSelection, computerSelection) == "Computer"){
-            scoreComputer++
-        }
-    }
-    console.log("Game Over")
-    if(scorePlayer > scoreComputer){
-        console.log("Player is the winner!")
-    }
-    else if(scorePlayer < scoreComputer){
-        console.log("Computer is the winner");
-
-    }
-    else{
-        console.log("We have a Tie!")
-    }
-    console.log(`Player: ${scorePlayer} | Computer: ${scoreComputer}`)
-}**/
-
-
 const rockButton = document.querySelector('.rock')
 const paperButton = document.querySelector('.paper')
 const scissorsButton = document.querySelector('.scissors')
@@ -105,7 +74,7 @@ rockButton.addEventListener('click', () =>{
     resultDiv.textContent = `Player: ${playerScore} | Computer: ${computerScore}`;
     const gameResult = getWinner(playerScore, computerScore);
     if (gameResult) {
-        // Wyświetla napis wyniku gry.
+       
         resultDiv.textContent = gameResult;
 }})
 
@@ -116,7 +85,7 @@ paperButton.addEventListener('click', () =>{
     resultDiv.textContent = `Player: ${playerScore} | Computer: ${computerScore}`;
     const gameResult = getWinner(playerScore, computerScore);
     if (gameResult) {
-        // Wyświetla napis wyniku gry.
+        
         resultDiv.textContent = gameResult;
 }})
 
@@ -127,7 +96,7 @@ scissorsButton.addEventListener('click', () =>{
     resultDiv.textContent = `Player: ${playerScore} | Computer: ${computerScore}`;
     const gameResult = getWinner(playerScore, computerScore);
     if (gameResult) {
-        // Wyświetla napis wyniku gry.
+        
         resultDiv.textContent = gameResult;
 }})
 
